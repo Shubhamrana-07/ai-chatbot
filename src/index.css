@@ -2,15 +2,96 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Forum&family=Inder&family=Inter:opsz,wght@14..32,100..900&family=Poppins&display=swap");
 
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
   font-family: "Inter", serif;
 }
 body {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
-  background: linear-gradient(#f4f0ff, #dacdff);
+  background: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+.container {
+  flex: 1;
+}
+/* Hero Section */
+.hero {
+    background: url('coffee-bg.jpg') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+.cta-btn {
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 25px;
+    background: linear-gradient(267deg,#da7c25 .36%,#b923e1 102.06%,transparent);
+    cursor: pointer;
+    transition: .5s;
+    border: solid 1px #fff;
+}
+.cta-btn:hover {
+  transform: scale(1.1);
+}
+
+
+/* Features Section */
+.features {
+    padding: 50px 20px;
+    background: #fff;
+}
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.feature {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+}
+.feature img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+.feature h3 {
+    font-size: 1.3rem;
+}
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  width: 100%;
+  position: absolute !important;
+  bottom: 0px;
+  z-index: -1;
 }
 #chatbot-toggler{
   position: fixed;
@@ -230,5 +311,25 @@ color: #fff;
   }
   .chat-footer{
     padding: 10px 15px 15px;
+  }
+  .hero {
+    height: auto; /* Adjust hero height for smaller screens */
+    padding: 200px 20px;
+  }
+  .hero h1 {
+    font-size: 2rem; /* Reduce font size */
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .cta-btn {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+  
+  footer {
+    position: relative; /* Remove bottom offset */
+    bottom: 0;
+    width: 100%;
   }
 }

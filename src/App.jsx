@@ -60,7 +60,24 @@ const App = () => {
     chatBodyRef.current.scrollTo({top: chatBodyRef.current.scrollHeight, behavior: "smooth"});
   },[chatHistory]);
   return (
+      <>
     <div className={`container ${showChatbot ? "show-chatbot" : ""}`}>
+      <header class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Aroma Beans Coffee</h1>
+            <p>Your personal coffee assistant, ready to chat and help you find the perfect brew!</p>
+            <button class="cta-btn" onClick={() => setshowChatbot(prev => !prev)}>
+                Start Chatting
+            </button>
+        </div>
+    </header>
+
+  
+
+    
+   
+
+
       <button onClick={() => setshowChatbot(prev => !prev)} id="chatbot-toggler">
         <span className="material-symbols-rounded">mode_comment</span>
         <span className="material-symbols-rounded">close</span>
@@ -102,6 +119,11 @@ const App = () => {
         </div>
       </div>
     </div>
+    <footer>
+    <p>&copy; 2025 Aroma Beans Coffee. All rights reserved.</p>
+</footer>
+</>
+
   );
 };
 
